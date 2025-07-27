@@ -1,0 +1,27 @@
+# Core dependencies
+langchain>=0.1.0
+langchain-community>=0.0.20
+langgraph>=0.0.40
+langchain-core>=0.1.0
+
+# Local LLM and embeddings
+ollama>=0.1.7
+sentence-transformers>=2.2.2
+
+# PDF processing
+PyMuPDF>=1.23.0
+pymupdf4llm>=0.0.5
+
+# Vespa client
+pyvespa>=0.36.0
+
+# Text processing
+tiktoken>=0.5.0
+
+# UI (optional)
+chainlit>=1.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=1.10.0
+typing-extensions>=4.5.0 
