@@ -155,16 +155,19 @@ print(result['answer'])
 
 ```mermaid
 graph TD
-    A[User Question] --> B[Retrieve: Vespa Search]
+    A[START: User Question] --> B[Retrieve: Vespa Search]
     B --> C[Grade Documents: isREL Check]
-    C --> D{Relevant Documents?}
-    D -->|No| E[Rewrite Query]
+    C --> D{Relevant Documents Found?}
+    D -->|No| E[Transform Query]
     E --> B
     D -->|Yes| F[Generate: LLM Answer]
     F --> G[Grade Generation: isSUP Check]
     G --> H{Hallucination Detected?}
-    H -->|Yes| F
-    H -->|No| I[Final Answer]
+    H -->|Yes: Not Supported| F
+    H -->|No: Grounded| I[Grade Answer: Usefulness Check]
+    I --> J{Answer Addresses Question?}
+    J -->|No: Not Useful| E
+    J -->|Yes: Useful| K[END: Final Answer]
 ```
 
 ## 📊 System Performance
