@@ -4,7 +4,7 @@ A Self-Reflective Retrieval-Augmented Generation (Self-RAG) system for Turkish e
 
 ## 🎯 Features
 
-- **Self-RAG LangGraph Implementation**: Includes isREL (relevance) and isSUP (hallucination) controls
+- **Self-RAG LangGraph Implementation**: Includes isREL (relevance), isSUP (hallucination), and utility controls
 - **Turkish PDF Processing**: PyMuPDF with Turkish character support
 - **Vespa Vector Database**: High-performance vector search and retrieval
 - **Local LLM**: Ollama llama3.2:1b model for Turkish language support
